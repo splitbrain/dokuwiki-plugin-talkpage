@@ -17,26 +17,21 @@ require_once DOKU_PLUGIN.'syntax.php';
 
 class syntax_plugin_talkpage extends DokuWiki_Syntax_Plugin {
     public function getType() {
-        return 'FIXME: container|baseonly|formatting|substition|protected|disabled|paragraphs';
+        return 'substition';
     }
 
     public function getPType() {
-        return 'FIXME: normal|block|stack';
+        return 'normal';
     }
 
     public function getSort() {
-        return FIXME;
+        return 444;
     }
 
 
     public function connectTo($mode) {
-        $this->Lexer->addSpecialPattern('<FIXME>',$mode,'plugin_talkpage');
-//        $this->Lexer->addEntryPattern('<FIXME>',$mode,'plugin_talkpage');
+        $this->Lexer->addSpecialPattern('~~TALKPAGE~~',$mode,'plugin_talkpage');
     }
-
-//    public function postConnect() {
-//        $this->Lexer->addExitPattern('</FIXME>','plugin_talkpage');
-//    }
 
     public function handle($match, $state, $pos, &$handler){
         $data = array();
@@ -45,7 +40,28 @@ class syntax_plugin_talkpage extends DokuWiki_Syntax_Plugin {
     }
 
     public function render($mode, &$renderer, $data) {
+        global $INFO;
         if($mode != 'xhtml') return false;
+
+        $renderer->info['cache'] = false;
+
+        $talkns = cleanID($this->getConf('talkns'));
+
+        if(substr($INFO['id'],0,strlen($talkns)+1) === "$talkns:"){
+            // we're on the talk page
+            $goto = substr($INFO['id'],strlen($talkns)+1);
+            $text = 'back';
+        }else{
+            // we want to the talk page
+            $goto = $talkns .':'.$INFO['id'];
+            if(page_exists($talkpage)){
+                $text = 'talk';
+            }else{
+                $text = 'add';
+            }
+        }
+
+        $renderer->doc .= '<a href="'.wl($goto).'" class="talkpage talkpage-'.$text.'">'.$this->getLang($text).'</a>';
 
         return true;
     }
