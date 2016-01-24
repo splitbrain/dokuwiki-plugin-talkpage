@@ -1,7 +1,7 @@
 base   talkpage
 author Andreas Gohr
 email  andi@splitbrain.org
-date   2013-01-10
+date   2014-05-21
 name   talkpage plugin
 desc   A talk page button for the sidebar
 url    http://www.dokuwiki.org/plugin:talkpage
