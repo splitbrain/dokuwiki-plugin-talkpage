@@ -54,14 +54,15 @@ class syntax_plugin_talkpage extends DokuWiki_Syntax_Plugin {
         }else{
             // we want to the talk page
             $goto = $talkns .':'.$INFO['id'];
-            if(page_exists($talkpage)){
+            if(page_exists($goto)){
                 $text = 'talk';
             }else{
                 $text = 'add';
+                $linkrel = 'rel="nofollow"';
             }
         }
 
-        $renderer->doc .= '<a href="'.wl($goto).'" class="talkpage talkpage-'.$text.'">'.$this->getLang($text).'</a>';
+        $renderer->doc .= '<a href="'.wl($goto).'" class="talkpage talkpage-'.$text.'" '.$linkrel.'>'.$this->getLang($text).'</a>';
 
         return true;
     }
