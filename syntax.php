@@ -62,7 +62,7 @@ class syntax_plugin_talkpage extends DokuWiki_Syntax_Plugin {
             }
         }
 
-        $renderer->doc .= '<a href="'.wl($goto).'" class="talkpage talkpage-'.$text.'" rel="nofollow">'.$this->getLang($text).'</a>';
+        $renderer->doc .= '<a href="'.wl($goto).'" class="talkpage talkpage-'.$text.'" '.$linkrel.'>'.$this->getLang($text).'</a>';
 
         return true;
     }
