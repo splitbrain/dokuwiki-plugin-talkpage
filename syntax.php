@@ -33,13 +33,13 @@ class syntax_plugin_talkpage extends DokuWiki_Syntax_Plugin {
         $this->Lexer->addSpecialPattern('~~TALKPAGE~~',$mode,'plugin_talkpage');
     }
 
-    public function handle($match, $state, $pos, &$handler){
+    public function handle($match, $state, $pos, Doku_Handler $handler){
         $data = array();
 
         return $data;
     }
 
-    public function render($mode, &$renderer, $data) {
+    public function render($mode, Doku_Renderer $renderer, $data) {
         global $INFO;
         if($mode != 'xhtml') return false;
 
