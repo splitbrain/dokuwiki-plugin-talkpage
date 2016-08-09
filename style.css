@@ -1,0 +1,20 @@
+/**
+ * talkpage pagetool icon
+ */
+#dokuwiki__pagetools ul li a.talkpage {
+    background-position: right 0;
+}
+#dokuwiki__pagetools ul li a.talkpage:before {
+    content: url(talkpage-sprite.png);
+    margin-top: 0;
+}
+#dokuwiki__pagetools:hover ul li a.talkpage,
+#dokuwiki__pagetools ul li a.talkpage:focus,
+#dokuwiki__pagetools ul li a.talkpage:active {
+    background-image: url(talkpage-sprite.png);
+}
+#dokuwiki__pagetools ul li a.talkpage:hover,
+#dokuwiki__pagetools ul li a.talkpage:active,
+#dokuwiki__pagetools ul li a.talkpage:focus {
+    background-position: right -45px;
+}

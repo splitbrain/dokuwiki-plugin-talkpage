@@ -6,3 +6,4 @@
  */
 
 $conf['talkns']    = 'talk';
+$conf['showbutton'] = 1;

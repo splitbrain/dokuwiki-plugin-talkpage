@@ -7,4 +7,5 @@
 
 
 $meta['talkns'] = array('string');
+$meta['showbutton'] = array('onoff');
 
