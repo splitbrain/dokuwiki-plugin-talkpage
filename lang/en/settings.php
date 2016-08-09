@@ -6,6 +6,7 @@
  */
 
 $lang['langns'] = 'Namespace for talk pages';
+$lang['showbutton'] = 'Automatically show a button in compatible templates?';
 
 
 

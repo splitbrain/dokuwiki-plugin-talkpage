@@ -1,6 +1,6 @@
 <?php
 /**
- * English language file for talkpage plugin
+ * Russian language file for talkpage plugin
  *
  * @author jl Alice <jl.alice@yandex.ru>
  */

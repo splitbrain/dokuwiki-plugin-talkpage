@@ -1,6 +1,6 @@
 <?php
 /**
- * english language file for talkpage plugin
+ * Russian language file for talkpage plugin
  *
  * @author Andreas Gohr <andi@splitbrain.org>
  */
