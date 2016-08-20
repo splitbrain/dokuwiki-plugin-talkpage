@@ -5,7 +5,7 @@
  * @author Andreas Gohr <andi@splitbrain.org>
  */
 
-$lang['langns'] = 'Пространсто имён для страницы обсуждения';
+$lang['talkns'] = 'Пространсто имён для страницы обсуждения';
 
 
 
