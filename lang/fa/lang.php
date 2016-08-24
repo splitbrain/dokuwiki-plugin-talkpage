@@ -5,6 +5,6 @@
  *
  * @author Sam01 <m.sajad079@gmail.com>
  */
-$lang['back']                  = 'بازگشت به صفحه';
+$lang['back']                  = 'بازگشت به مقاله';
 $lang['add']                   = 'شروع بحث';
-$lang['talk']                  = 'بحث صفحه';
+$lang['talk']                  = 'بحث مقاله';
