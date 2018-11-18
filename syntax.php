@@ -79,6 +79,8 @@ class syntax_plugin_talkpage extends DokuWiki_Syntax_Plugin
         $attr['class'] = 'talkpage talkpage-' . $text;
 
         return array(
+            'goto' => $goto,
+            'type' => $text,
             'text' => $this->getLang($text),
             'attr' => $attr,
         );
