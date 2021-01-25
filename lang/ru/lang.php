@@ -8,6 +8,6 @@
  * @author Aleksandr Selivanov <alexgearbox@yandex.ru>
  * @author jl Alice <jl.alice@yandex.ru>
  */
-$lang['back']                  = 'Вернутся к странице';
+$lang['back']                  = 'Вернуться к странице';
 $lang['add']                   = 'Создать страницу обсуждения';
 $lang['talk']                  = 'Обсуждение';

@@ -8,5 +8,5 @@
  * @author Aleksandr Selivanov <alexgearbox@yandex.ru>
  * @author Andreas Gohr <andi@splitbrain.org>
  */
-$lang['langns']                = 'Пространсто имён для страниц обсуждения';
+$lang['langns']                = 'Пространство имён для страниц обсуждения';
 $lang['showbutton']            = 'Показывать автоматически кнопку в совместимых шаблонах?';
